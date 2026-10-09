@@ -6,7 +6,7 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev ./src/worker.js --live-reload",
-		"build": "node esbuild.js",
+		"build": "pnpm install --no-frozen-lockfile && node esbuild.js",
 		"start": "wrangler dev",
 		"lint": "prettier --write \"**/*.js\""
 	},
@@ -18,5 +18,8 @@
 		"esbuild": "^0.25.9",
 		"prettier": "^3.6.2",
 		"wrangler": "^4.110.0"
+	},
+	"pnpm": {
+		"patchedDependencies": {}
 	}
 }
